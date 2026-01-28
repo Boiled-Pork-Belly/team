@@ -38,5 +38,18 @@ const teamMembers = [
       linkedin: "https://linkedin.com",
       instagram: "https://instagram.com"
     }
+  },
+  {
+    name: "염",
+    role: "Fullstack / Cute Master",
+    mbti: "INFP",
+    profileImage: "https://api.dicebear.com/7.x/adventurer/svg?seed=Mimi",
+    introduction: "귀여운 게 세상을 구한다! 🐾<br>모든 코드를 귀엽고 사랑스럽게 만드는 작업을 좋아해요.",
+    skills: ["Vue.js", "Spring Boot", "Design"],
+    projects: ["반려동물 커뮤니티", "Team Flow 귀요미 패치"],
+    links: {
+      github: "https://github.com",
+      instagram: "https://instagram.com"
+    }
   }
 ];
