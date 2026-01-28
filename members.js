@@ -1,6 +1,6 @@
 const teamMembers = [
   {
-    name: "이지훈",
+    name: "이진훈",
     role: "Leader / Backend",
     mbti: "ENTJ",
     profileImage: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
