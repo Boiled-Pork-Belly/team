@@ -1,6 +1,6 @@
 const teamMembers = [
   {
-    name: "김철수",
+    name: "이지훈",
     role: "Leader / Backend",
     mbti: "ENTJ",
     profileImage: "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
@@ -14,9 +14,9 @@ const teamMembers = [
     }
   },
   {
-    name: "이영희",
-    role: "Frontend",
-    mbti: "ISFP",
+    name: "염주원",
+    role: "Happy Virus",
+    mbti: "INFP",
     profileImage: "https://api.dicebear.com/7.x/avataaars/svg?seed=Annie",
     introduction: "사용자가 머물고 싶은 편안한 UI를 만듭니다.<br>디테일과 애니메이션에 집착해요 ✨",
     skills: ["React", "TypeScript", "Figma"],
