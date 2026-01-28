@@ -27,7 +27,7 @@ const teamMembers = [
     }
   },
   {
-    name: "박민수",
+    name: "유니썬",
     role: "Designer / PM",
     mbti: "ENFP",
     profileImage: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jack",
