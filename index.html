@@ -233,8 +233,8 @@
             // Generate Skills HTML
             const skillsHtml = member.skills.map(skill => `<span class="tag">${skill}</span>`).join('');
 
-            // Generate Projects HTML
-            const projectsHtml = member.projects.map(project => `<div class="project-item">${project}</div>`).join('');
+            // Generate Hobbies HTML
+            const hobbiesHtml = member.hobbies.map(hobby => `<div class="project-item">${hobby}</div>`).join('');
 
             // Generate Links HTML
             let linksHtml = '';
@@ -260,8 +260,8 @@
                 <div class="section-title">SKILLS</div>
                 <div class="tags">${skillsHtml}</div>
 
-                <div class="section-title">PROJECTS</div>
-                ${projectsHtml}
+                <div class="section-title">HOBBIES</div>
+                ${hobbiesHtml}
 
                 <div class="social-links">${linksHtml}</div>
             </div>
