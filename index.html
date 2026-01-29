@@ -12,19 +12,18 @@
         rel="stylesheet">
     <style>
         :root {
-            --primary: #FF9AA2;
-            /* Pastel Pink */
-            --secondary: #B5EAD7;
-            /* Pastel Mint */
-            --accent: #C7CEEA;
-            /* Pastel Blue */
-            --bg: #FFF5F7;
-            /* Very Light Pink */
+            --primary: #4FD1C5;
+            /* Vibrant Mint */
+            --secondary: #9F7AEA;
+            /* Soft Purple */
+            --accent: #BEE3F8;
+            --bg: #F7FAFC;
             --card-bg: #FFFFFF;
-            --text-main: #6D5D6E;
-            --text-sub: #A0849D;
-            --tag-bg: #FFDAC1;
-            --tag-text: #D88569;
+            --text-main: #2D3748;
+            --text-sub: #4A5568;
+            --tag-bg: #E6FFFA;
+            /* Mint Tint */
+            --tag-text: #2C7A7B;
         }
 
         @keyframes floating {
@@ -43,19 +42,15 @@
 
         @keyframes rainbow-border {
             0% {
-                border-color: #FF9AA2;
+                border-color: var(--primary);
             }
 
-            33% {
-                border-color: #B5EAD7;
-            }
-
-            66% {
-                border-color: #C7CEEA;
+            50% {
+                border-color: var(--secondary);
             }
 
             100% {
-                border-color: #FF9AA2;
+                border-color: var(--primary);
             }
         }
 
@@ -63,8 +58,8 @@
             font-family: 'Sunflower', sans-serif;
             background-color: var(--bg);
             background-image:
-                radial-gradient(#FFB7B2 0.5px, transparent 0.5px),
-                radial-gradient(#FFB7B2 0.5px, #FFF5F7 0.5px);
+                radial-gradient(var(--primary) 0.5px, transparent 0.5px),
+                radial-gradient(var(--secondary) 0.5px, var(--bg) 0.5px);
             background-size: 20px 20px;
             background-position: 0 0, 10px 10px;
             margin: 0;
@@ -89,8 +84,8 @@
             font-family: 'Gaegu', cursive;
             font-size: 3.5rem;
             margin-bottom: 5px;
-            color: #FF7EB9;
-            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(255, 126, 185, 0.2);
+            color: var(--primary);
+            text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(159, 122, 234, 0.2);
         }
 
         .subtitle {
@@ -110,7 +105,7 @@
             background: var(--card-bg);
             border-radius: 40px;
             overflow: hidden;
-            box-shadow: 0 15px 0px rgba(255, 154, 162, 0.1);
+            box-shadow: 0 15px 0px rgba(79, 209, 197, 0.1);
             border: 4px solid transparent;
             animation: floating 4s ease-in-out infinite;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -123,14 +118,14 @@
 
         .card:hover {
             transform: scale(1.05) rotate(-1deg);
-            box-shadow: 0 20px 0px rgba(255, 154, 162, 0.2);
+            box-shadow: 0 20px 0px rgba(159, 122, 234, 0.2);
             border-color: var(--primary);
             animation-play-state: paused;
         }
 
         .card-header {
             height: 140px;
-            background: linear-gradient(135deg, #FFB7B2 0%, #FFDAC1 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             position: relative;
         }
 
@@ -338,7 +333,7 @@
         </header>
 
         <section id="team-goal" style="
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(135deg, #4FD1C5, #9F7AEA);
             color: white;
             padding: 30px;
             text-align: center;
@@ -371,10 +366,9 @@
 
         // Card Rendering Logic
         teamMembers.forEach((member, index) => {
-            // Gradient variation based on index (just for fun visual variety)
-            let headerGradient = 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)';
-            if (index % 3 === 1) headerGradient = 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)';
-            if (index % 3 === 2) headerGradient = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+            // Gradient variation based on index
+            let headerGradient = 'linear-gradient(135deg, #4FD1C5 0%, #9F7AEA 100%)';
+            if (index % 2 === 1) headerGradient = 'linear-gradient(135deg, #9F7AEA 0%, #4FD1C5 100%)';
 
             const card = document.createElement('div');
             card.className = 'card';
@@ -394,7 +388,7 @@
             }
 
             card.innerHTML = `
-            <div class="card-header"></div>
+            <div class="card-header" style="background: ${headerGradient}"></div>
             <img src="${member.profileImage}" class="profile-img" alt="${member.name}">
             <div class="card-body">
                 <h2 class="name">${member.name}</h2>
